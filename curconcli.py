@@ -54,6 +54,7 @@ def currency_fetcher(force=False):
     if file_not_found or too_old or force:
         print('Actualizando Tasas...')
         try:
+            #Este API esta roto ha de realizarse un cambio en la logica general del programa
             with urlopen('https://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json') as response:
                 source = response.read()
 
